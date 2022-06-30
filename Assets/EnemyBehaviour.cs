@@ -2,8 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyBehaviour : MonoBehaviour
 {
+    [Header("unity Setup")]
+    public ParticleSystem deathParticles;
+
+    
+
     public Transform player;
     private Rigidbody rb;
     private Vector3 movement;
@@ -68,7 +74,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
         if(hp<=0)
         {
-            Destroy(gameObject);
+            Destroy();
             int tmp = Random.Range(1, coinChanceOutOfOne);
             print(tmp);
             if(tmp==2)
@@ -78,5 +84,13 @@ public class EnemyBehaviour : MonoBehaviour
     void moveCharacter(Vector3 direction)
     {
         rb.MovePosition(transform.position + (direction * moveSpeed * Time.deltaTime));
+    }
+
+    private void Destroy()
+    {
+        Instantiate(deathParticles, transform.position, Quaternion.identity);
+        
+        Destroy(gameObject);
+
     }
 }
