@@ -1354,9 +1354,12 @@ namespace UnityEngine.UI
             switch (platform)
             {
                 case RuntimePlatform.Android:
+<<<<<<< HEAD
                     if (s_IsQuestDevice)
                         return TouchScreenKeyboard.isSupported;
 
+=======
+>>>>>>> origin/elham2
                     return !TouchScreenKeyboard.isInPlaceEditingAllowed;
                 default:
                     return TouchScreenKeyboard.isSupported;
@@ -1372,7 +1375,11 @@ namespace UnityEngine.UI
         // This currently only happens on Chrome OS devices (that support laptop and tablet mode).
         private bool InPlaceEditingChanged()
         {
+<<<<<<< HEAD
             return !s_IsQuestDevice && m_TouchKeyboardAllowsInPlaceEditing != TouchScreenKeyboard.isInPlaceEditingAllowed;
+=======
+            return m_TouchKeyboardAllowsInPlaceEditing != TouchScreenKeyboard.isInPlaceEditingAllowed;
+>>>>>>> origin/elham2
         }
 
         void UpdateCaretFromKeyboard()
@@ -3117,7 +3124,11 @@ namespace UnityEngine.UI
             // Cache the value of isInPlaceEditingAllowed, because on UWP this involves calling into native code
             // Usually, the value only needs to be updated once when the TouchKeyboard is opened; however, on Chrome OS,
             // we check repeatedly to see if the in-place editing state has changed, so we can take action.
+<<<<<<< HEAD
             m_TouchKeyboardAllowsInPlaceEditing = !s_IsQuestDevice && TouchScreenKeyboard.isInPlaceEditingAllowed;
+=======
+            m_TouchKeyboardAllowsInPlaceEditing = TouchScreenKeyboard.isInPlaceEditingAllowed;
+>>>>>>> origin/elham2
 
             if (TouchScreenKeyboardShouldBeUsed())
             {

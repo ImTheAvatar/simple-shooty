@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":-2.9537248611450197,"y":38.78350067138672,"z":10.168752670288086},"rotation":{"x":-0.23946085572242738,"y":-0.0023300559259951116,"z":0.0005787526606582105,"w":-0.9709118008613586},"size":1.1893956661224366,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":false,"pivot":{"x":-14.047769546508789,"y":46.00988006591797,"z":39.060401916503909},"rotation":{"x":-0.009542702697217465,"y":-0.9716905951499939,"z":0.0396677665412426,"w":-0.2328559309244156},"size":2.168714761734009,"orthographic":false}
+>>>>>>> origin/elham2

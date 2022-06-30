@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DropDown : MonoBehaviour
 {
     List<GameObject> currentCollisions = new List<GameObject>();
     bool tmp = false;
+    int hp = 2;
     public GameObject lost;
     Animator anim;
+
+    public TextMeshProUGUI myTextElement;
     void OnTriggerEnter(Collider col)
     {
 
@@ -69,6 +73,12 @@ public class DropDown : MonoBehaviour
         if (gameObject.tag.Equals("Enemy"))
             yield return new WaitForEndOfFrame();
         else {
+            if (hp > 0)
+            {
+                hp--;
+                if(myTextElement!=null) myTextElement.text = hp.ToString();
+                yield break;
+            }
             lost.SetActive(true);
             yield return new WaitForSeconds(2f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
